@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>More info</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container">
+        <a href="{% url 'index' %}">Home</a>
+        <h1>Developer projects and programming languages</h1>
+        <br>
+        <hr>
+    <!--render the dict from more_info view-->
+    {% for i in all_data %}
+            <li> {{i.name}} in <strong>{{i.language}}</strong>
+                <br>
+                Available info about project: {{i.description}}
+            </li>
+
+    {% endfor %}
+
+
+</div>
+</body>
+</html>

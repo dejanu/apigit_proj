@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <title>HomePage</title>
+</head>
+<body>
+<div class="container">
+    <a href="{% url 'index' %}">Home</a>
+    <a href="{% url 'basic:stackoverflow' %}">Stack reputation</a>
+    <h1> Home page </h1>
+    <br>
+    <form method="post" action="#">
+    <!--Form as paragraph-->
+        {% csrf_token %}
+        {{form.as_p}}
+        <!--submit button as btn-primary class bootstrap-->
+        <input type="submit" class="btn btn-primary" value="Get Data">
+    </form>
+    <hr>
+<div>
+</body>
+</html>
